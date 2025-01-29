@@ -1,0 +1,50 @@
+.hero {
+    position: relative;
+    height: 100vh;
+     /* Replace with your own image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+    opacity: 0.7;
+  }
+  
+  .hero .cta-btn {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero .cta-btn:hover {
+    background-color: #fff;
+    color: #e74c3c;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  

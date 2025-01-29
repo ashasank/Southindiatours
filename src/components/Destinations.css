@@ -1,0 +1,77 @@
+.destinations-container {
+    padding: 3rem 0;
+    background-color: #f4f7fa;
+  }
+  
+  h2 {
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  form .form-select, form .form-control {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+  }
+  
+  form .form-select:focus, form .form-control:focus {
+    border-color: #e74c3c;
+    outline: none;
+  }
+  
+  .card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    padding:20px;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .card-text {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .card .btn {
+    background-color: #e74c3c;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    margin-left:170px;
+  }
+  
+  .card .btn:hover {
+    background-color: #fff;
+    color: #e74c3c;
+  }
+  

@@ -1,0 +1,48 @@
+/* Styling for the services section */
+.services-section {
+    padding: 60px 0;
+    background-color: #f4f4f4;
+  }
+  
+  .services-header {
+    text-align: center;
+    font-size: 36px;
+    color: #11235A; /* Dark Blue */
+    margin-bottom: 40px;
+  }
+  
+  .service-item {
+    margin-bottom: 30px;
+  }
+  
+  .card {
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 8px;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-title {
+    font-size: 24px;
+    color: #11235A; /* Dark Blue */
+  }
+  
+  .card-text {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .services-header {
+      font-size: 28px;
+    }
+    
+    .service-item {
+      margin-bottom: 20px;
+    }
+  }
+  

@@ -1,0 +1,52 @@
+/* General Footer Styling */
+.footer {
+    background-color:#11235A;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Social Icons Styling */
+  .social-icons {
+    margin-top: 10px;
+  }
+  
+  .social-icons a {
+    margin: 0 15px;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px;
+  }
+  
+  .social-icons a:hover {
+    color: #2575fc;
+  }
+  
+  .social-icons i {
+    margin-right: 8px;
+  }
+  
+  /* Add some space and styling for mobile responsiveness */
+  @media (max-width: 768px) {
+    .footer {
+      font-size: 12px;
+    }
+  
+    .social-icons a {
+      font-size: 16px;
+      margin: 0 10px;
+    }
+  }
+  
