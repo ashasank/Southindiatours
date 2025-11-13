@@ -6,19 +6,15 @@ const authRoutes=require('./routes/auth.js')
 const app = express();
 const dotenv = require('dotenv');
 dotenv.config();
-// Middleware
 app.use(cors());
 app.use(bodyParser.json());
-// Connect to MongoDB
 app.use('/auth',authRoutes)
-mongoose.connect('mongodb://localhost:27017/bookingDB', {
+mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-}).then(() => {
-  console.log('Connected to MongoDB');
-}).catch(err => {
-  console.log('Error connecting to MongoDB:', err.message);
-});
+})
+.then(() => console.log('✅ Connected to MongoDB Atlas'))
+.catch(err => console.log('❌ MongoDB connection error:', err.message));
 const packageSchema = new mongoose.Schema({
   destination: String,
   packageName: String,
@@ -31,11 +27,11 @@ const bookingSchema = new mongoose.Schema({
   email: String,
   phone: String,
   packageId: { type: mongoose.Schema.Types.ObjectId, ref: 'Package' },
+  destination: String,
   date: Date,
   guests: Number,
 });
 const Booking = mongoose.model('Booking', bookingSchema);
-// POST Route to create a booking
 app.post('/api/bookings', async (req, res) => {
   const { name, email, phone, packageId, date, guests } = req.body;
   const newBooking = new Booking({ name, email, phone, packageId, date, guests });
