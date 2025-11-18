@@ -14,7 +14,7 @@ const SignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/auth/signin', formData);
+      const res = await axios.post(`${process.env.REACT_APP_EC2_IP}/api/auth/signin`, formData); 
       const { token } = res.data;
       sessionStorage.setItem('authToken', token); // Store token in sessionStorage
 
