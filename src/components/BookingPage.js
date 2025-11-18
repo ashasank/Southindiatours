@@ -49,14 +49,15 @@ const BookingPage = () => {
     try {
       const token = sessionStorage.getItem('authToken');
       const response = await axios.post(
-        'http://localhost:5000/api/bookings',
-        formData,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`, // Send token in the request header
-          },
-        }
-      );
+  `${process.env.REACT_APP_EC2_IP}/api/bookings`,
+  formData,
+  {
+    headers: {
+      Authorization: `Bearer ${token}`, // Send token in the request header
+    },
+  }
+);
+
       alert(response.data.message); // Success message
 
       // Clear the form fields after successful booking
